@@ -6,7 +6,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Vote implements ActionListener {
+public class Vote implements ActionListener {           // save file as Vote.java
 
     JButton button1;
     JButton button2;
@@ -14,9 +14,9 @@ public class Vote implements ActionListener {
     JButton button4;
     JButton button5;
     static int cand1 = 0, cand2 = 0, cand3 = 0, cand4 = 0, cand5 = 0;
-    ImageIcon img = new ImageIcon("votesymbol.png");
-    ImageIcon vote = new ImageIcon("button.jpg");
-    ImageIcon success = new ImageIcon("success.jpg");
+    ImageIcon img = new ImageIcon("votesymbol.png");    // save image in same folder of pragram
+    ImageIcon vote = new ImageIcon("button.jpg");       // save image in same folder of pragram
+    ImageIcon success = new ImageIcon("success.jpg");    // save image in same folder of pragram
     JFrame frame = new JFrame();
     static int[] saved;
     static int a1, k = -1, i = 1;
