@@ -1,12 +1,12 @@
-// package project;
+// package GUI;
+// save file as Vote.java
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Vote implements ActionListener {           // save file as Vote.java
+public class Vote implements ActionListener {
 
     JButton button1;
     JButton button2;
@@ -14,11 +14,12 @@ public class Vote implements ActionListener {           // save file as Vote.jav
     JButton button4;
     JButton button5;
     static int cand1 = 0, cand2 = 0, cand3 = 0, cand4 = 0, cand5 = 0;
-    ImageIcon img = new ImageIcon("votesymbol.png");    // save image in same folder of program
-    ImageIcon vote = new ImageIcon("button.jpg");       // save image in same folder of program
-    ImageIcon success = new ImageIcon("success.jpg");    // save image in same folder of program
+
+    ImageIcon img = new ImageIcon("votebutton.jpg");   // if you want insert image save image in same folder having this code. in () bracket add image name with extension 
+    ImageIcon img1 = new ImageIcon("votesymbol.png");  // if you want insert image save image in same folder having this code. in () bracket add image name with extension 
     JFrame frame = new JFrame();
-    static int[] saved;
+    static int [] voted;
+    static int [] validid;
     static int a1, k = -1, i = 1;
 
     public static void main(String[] args) {
@@ -26,37 +27,111 @@ public class Vote implements ActionListener {           // save file as Vote.jav
         String n1 = JOptionPane.showInputDialog("ENTER THE NUMBER OF VOTERS ?");
         a1 = Integer.parseInt(n1);
         String[] id = new String[a1];
-        saved = new int[a1];
+        voted = new int[a1];
+        validid = new int[a1];
         for (int j = 0; j < a1; j++) {
-            saved[j] = 0;
+            voted[j] = 0;
+            validid[j]=j+1;
         }
-        vote(saved, a1);
+        vote();
     }
 
-    static void vote(int[] saved, int a1) {
+    static void vote() {
+
         Vote s = new Vote();
-        int a2 = 123456789;
+        int id = -1;
         if (i > a1) {
             JOptionPane.showMessageDialog(null, "VOTE LIMIT FINISHED", "MESSAGE", JOptionPane.ERROR_MESSAGE);
-            int x = JOptionPane.showConfirmDialog(null, "DO YOU WANT SEE RESULT", "OPERATION",
+            int confirm = JOptionPane.showConfirmDialog(null, "DO YOU WANT TO SEE RESULT", "OPERATION",
                     JOptionPane.YES_NO_OPTION);
-            if (x == 0) {
+            if (confirm == 0){
                 s.result();
-            } else {
-                vote(saved, a1);
             }
-        } else if (i <= a1) {
+            else {
+                vote();
+            }
+        }
+        else if(i<=a1){
+            int confirm = JOptionPane.showConfirmDialog(null, "DO YOU WANT TO VOTE", "OPERATION",
+                    JOptionPane.YES_NO_OPTION);
+            if (confirm == 0){
             String n2 = JOptionPane.showInputDialog("ENTER THE UNIQUE ID ?");
-            a2 = Integer.parseInt(n2);
-            if (check(saved, a1, a2)) {
-                saved[++k] = a2;
-                s.createconsole();
-            } else {
-                JOptionPane.showMessageDialog(null, "SORRY! YOU HAVE VOTED", "MESSAGE", JOptionPane.ERROR_MESSAGE);
-                vote(saved, a1);
+            id = Integer.parseInt(n2);
+            voteconsole(id);
+            }
+            else{
+                int result = JOptionPane.showConfirmDialog(null, "DO YOU WANT TO SEE RESULT", "OPERATION",
+                        JOptionPane.YES_NO_OPTION);
+                if (result == 0){
+                    i=a1+10;
+                    s.result();
+                }
+                else {
+                    vote();
+                }
             }
         }
     }
+
+    static void voteconsole(int id){
+        Vote s = new Vote();
+        if (checkvoted(voted, a1, id)) {
+            JOptionPane.showMessageDialog(null, "SORRY! YOU HAVE VOTED", "MESSAGE", JOptionPane.ERROR_MESSAGE);
+            vote();
+        }
+        else if (!checkvalidid(validid,a1,id)){
+            JOptionPane.showMessageDialog(null, "SORRY! YOU ENTERED INVALID ID", "MESSAGE", JOptionPane.ERROR_MESSAGE);
+            vote();
+        }
+        else if (!checkvoted(voted, a1, id) && checkvalidid(validid,a1,id)){
+            voted[++k] = id;
+            s.createconsole();
+        }
+    }
+    static boolean checkvoted(int[] voted, int a1, int id) {
+        for (int j = 0; j < a1; j++) {
+            if (id == voted[j]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    static boolean checkvalidid(int[] validdid, int a1, int id) {
+        for (int j = 0; j < a1; j++) {
+            if (id == validdid[j]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    String scheck() {
+
+        int x1 = Math.max(cand1, cand2);
+        int x2 = Math.max(cand3, cand4);
+        int x3 = Math.max(x1, x2);
+        int x4 = Math.max(x3, cand5);
+        if (x4 == cand1) {
+            return "CANDIDATE 1";
+        } else if (x4 == cand2) {
+            return "CANDIDATE 2";
+        } else if (x4 == cand3) {
+            return "CANDIDATE 3";
+        } else if (x4 == cand4) {
+            return "CANDIDATE 4";
+        }
+        return "NOTA";
+    }
+
+    int icheck() {
+        int x1 = Math.max(cand1, cand2);
+        int x2 = Math.max(cand3, cand4);
+        int x3 = Math.max(x1, x2);
+        return Math.max(x3, cand5);
+    }
+
 
     void result() {
 
@@ -305,41 +380,6 @@ public class Vote implements ActionListener {           // save file as Vote.jav
         frame.add(label1);
         frame.setVisible(true);
     }
-
-    String scheck() {
-
-        int x1 = Math.max(cand1, cand2);
-        int x2 = Math.max(cand3, cand4);
-        int x3 = Math.max(x1, x2);
-        int x4 = Math.max(x3, cand5);
-        if (x4 == cand1) {
-            return "CANDIDATE 1";
-        } else if (x4 == cand2) {
-            return "CANDIDATE 2";
-        } else if (x4 == cand3) {
-            return "CANDIDATE 3";
-        } else if (x4 == cand4) {
-            return "CANDIDATE 4";
-        }
-        return "NOTA";
-    }
-
-    int icheck() {
-        int x1 = Math.max(cand1, cand2);
-        int x2 = Math.max(cand3, cand4);
-        int x3 = Math.max(x1, x2);
-        return Math.max(x3, cand5);
-    }
-
-    static boolean check(int[] saved, int a1, int a2) {
-        for (int j = 0; j < a1; j++) {
-            if (a2 == saved[j]) {
-                return false;
-            }
-        }
-        return true;
-    }
-
     void createconsole() {
 
         JPanel panel1 = new JPanel();
@@ -443,7 +483,7 @@ public class Vote implements ActionListener {           // save file as Vote.jav
         button1.setBounds(350, 30, 100, 60);
         button1.setBackground(Color.red);
         button1.setForeground(Color.green);
-        button1.setIcon(vote);
+        button1.setIcon(img1);
         button1.setFont(new Font("s", Font.BOLD, 10));
         button1.setFocusable(false);
         button1.addActionListener(this);
@@ -451,7 +491,7 @@ public class Vote implements ActionListener {           // save file as Vote.jav
 
         button2.setBounds(350, 30, 100, 60);
         button2.setBackground(Color.red);
-        button2.setIcon(vote);
+        button2.setIcon(img1);
         button2.setFont(new Font("s", Font.BOLD, 10));
         button2.setFocusable(false);
         button2.addActionListener(this);
@@ -459,7 +499,7 @@ public class Vote implements ActionListener {           // save file as Vote.jav
 
         button3.setBounds(350, 30, 100, 60);
         button3.setBackground(Color.red);
-        button3.setIcon(vote);
+        button3.setIcon(img1);
         button3.setFont(new Font("s", Font.BOLD, 10));
         button3.setFocusable(false);
         button3.addActionListener(this);
@@ -467,7 +507,7 @@ public class Vote implements ActionListener {           // save file as Vote.jav
 
         button4.setBounds(350, 30, 100, 60);
         button4.setBackground(Color.red);
-        button4.setIcon(vote);
+        button4.setIcon(img1);
         button4.setFont(new Font("s", Font.BOLD, 10));
         button4.setFocusable(false);
         button4.addActionListener(this);
@@ -475,7 +515,7 @@ public class Vote implements ActionListener {           // save file as Vote.jav
 
         button5.setBounds(350, 30, 100, 60);
         button5.setBackground(Color.red);
-        button5.setIcon(vote);
+        button5.setIcon(img1);
         button5.setFont(new Font("s", Font.BOLD, 10));
         button5.setFocusable(false);
         button5.addActionListener(this);
@@ -551,17 +591,19 @@ public class Vote implements ActionListener {           // save file as Vote.jav
         frame.dispose();
         i++;
         JOptionPane.showMessageDialog(null, "VOTE SUCCESSFUL!");
-        int ans = JOptionPane.showConfirmDialog(null, "DO YOU WANT TO VOTE ?", "CONFIRMATION PAGE",
+        int ans = JOptionPane.showConfirmDialog(null, "DO YOU WANT TO CONTINUE?", "CONFIRMATION PAGE",
                 JOptionPane.YES_NO_OPTION);
         if (ans == 0) {
-            vote(saved, a1);
+            vote();
         } else {
             int x = JOptionPane.showConfirmDialog(null, "DO YOU WANT SEE RESULT", "OPERATION",
                     JOptionPane.YES_NO_OPTION);
             if (x == 0) {
                 s.result();
             }
-            vote(saved, a1);
+            else {
+                vote();
+            }
         }
     }
 }
