@@ -1,5 +1,6 @@
 // package GUI;
 // Save file as Guess.java
+// guess the number game in java
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
