@@ -1,5 +1,5 @@
 // package GUI;
-// Save file as Guess.java
+// Save file as guess_the_number.java
 // guess the number game in java
 import javax.swing.*;
 import java.awt.*;
@@ -7,7 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
 
-public class Guess implements ActionListener
+public class guess_the_number implements ActionListener
 {
     static int number;
     static int chance=100;
@@ -44,7 +44,7 @@ public class Guess implements ActionListener
     public static void main(String[] args)
     {
         generate();
-        Guess s = new Guess();
+        guess_the_number s = new guess_the_number();
     }
 
     Guess()
