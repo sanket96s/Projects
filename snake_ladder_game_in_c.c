@@ -1,12 +1,12 @@
 #include <stdio.h>
-#include<windows.h>
+#include<windows.h> // comment this header if not running on windows or running online
 #include <stdlib.h>
 #include <time.h>
 int cur_pos1 = 0, cur_pos2 = 0;
 char player1[] = "P1", player2[] = "P2";
 // Snakes: 25 to 9  , 65 to 40 , 99 to 1
 // Ladder: 13 to 42 , 60 to 83 , 70 to 93
-
+// comment this function if not running on windows or running online
 void textcolor(int b)
 {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),b);
@@ -79,17 +79,17 @@ void display()
 
             if (cur_pos1 == diceres)
             {
-                textcolor(14);
+                textcolor(14); // comment this header if not running on windows or running online
                 printf("%s\t", player1);
             }
             else if (cur_pos2 == diceres)
             {
-                textcolor(4);
+                textcolor(4); // comment this header if not running on windows or running online
                 printf("%s\t", player2);
             }
             else
             {
-                textcolor(15);
+                textcolor(15); // comment this header if not running on windows or running online
                 printf("%d\t", diceres);
             }
         }
