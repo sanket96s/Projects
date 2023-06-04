@@ -15,8 +15,8 @@ public class Vote implements ActionListener {
     JButton button5;
     static int cand1 = 0, cand2 = 0, cand3 = 0, cand4 = 0, cand5 = 0;
 
-    ImageIcon img = new ImageIcon("votebutton.jpg");
-    ImageIcon img1 = new ImageIcon("votesymbol.png");
+    ImageIcon img = new ImageIcon("votebutton.jpg"); // add your own icon
+    ImageIcon img1 = new ImageIcon("votesymbol.png"); // add your own icon
     JFrame frame = new JFrame();
     static int [] voted;
     static int [] validid;
