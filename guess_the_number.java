@@ -34,6 +34,7 @@ public class guess_the_number implements ActionListener
     JButton button3;
     JButton button4;
     JProgressBar bar;
+    // add images as your requirements from your own pc
     ImageIcon guess = new ImageIcon("guess.jpg");
     ImageIcon arrow = new ImageIcon("arrow.jpg");
     ImageIcon hacker = new ImageIcon("Hacker.jpg");
