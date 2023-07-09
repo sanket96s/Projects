@@ -1,5 +1,4 @@
 # projects
-
 Vote.java 
 
      In this project we simply build a vote page using GUI in java.
