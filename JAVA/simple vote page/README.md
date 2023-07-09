@@ -4,4 +4,4 @@
 
 <h1 align="center">Result page</h1>
 
-          <img src="https://github.com/sanket96s/projects/assets/109816069/71ea75e8-9209-4b88-b15b-cea01a019787" alt="image" height="300" width="300">
+                    <img src="https://github.com/sanket96s/projects/assets/109816069/71ea75e8-9209-4b88-b15b-cea01a019787" alt="image" height="300" width="300">
