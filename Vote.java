@@ -479,42 +479,46 @@ public class Vote implements ActionListener {
         field5b.setFocusable(false);
 
         button1.setBounds(350, 30, 100, 60);
-        button1.setBackground(Color.red);
-        button1.setForeground(Color.green);
-        button1.setText("Vote");
-        button1.setFont(new Font("s", Font.BOLD, 10));
+        button1.setBackground(Color.yellow);
+        button1.setForeground(Color.black);
+        button1.setText("vote");
+        button1.setFont(new Font("s", Font.BOLD, 30));
         button1.setFocusable(false);
         button1.addActionListener(this);
         button1.setEnabled(true);
 
         button2.setBounds(350, 30, 100, 60);
-        button2.setBackground(Color.red);
-        button2.setText("Vote");
-        button2.setFont(new Font("s", Font.BOLD, 10));
+        button2.setBackground(Color.yellow);
+        button2.setForeground(Color.black);
+        button2.setText("vote");
+        button2.setFont(new Font("s", Font.BOLD, 30));
         button2.setFocusable(false);
         button2.addActionListener(this);
         button2.setEnabled(true);
 
         button3.setBounds(350, 30, 100, 60);
-        button3.setBackground(Color.red);
-        button3.setText("Vote");
-        button3.setFont(new Font("s", Font.BOLD, 10));
+        button3.setBackground(Color.yellow);
+        button3.setForeground(Color.black);
+        button3.setText("vote");
+        button3.setFont(new Font("s", Font.BOLD, 30));
         button3.setFocusable(false);
         button3.addActionListener(this);
         button3.setEnabled(true);
 
         button4.setBounds(350, 30, 100, 60);
-        button4.setBackground(Color.red);
-        button4.setText("Vote");
-        button4.setFont(new Font("s", Font.BOLD, 10));
+        button4.setBackground(Color.yellow);
+        button4.setForeground(Color.black);
+        button4.setText("vote");
+        button4.setFont(new Font("s", Font.BOLD, 30));
         button4.setFocusable(false);
         button4.addActionListener(this);
         button4.setEnabled(true);
 
         button5.setBounds(350, 30, 100, 60);
-        button5.setBackground(Color.red);
-        button5.setText("Vote");
-        button5.setFont(new Font("s", Font.BOLD, 10));
+        button5.setBackground(Color.yellow);
+        button5.setForeground(Color.black);
+        button5.setText("vote");
+        button5.setFont(new Font("s", Font.BOLD, 30));
         button5.setFocusable(false);
         button5.addActionListener(this);
         button5.setEnabled(true);
