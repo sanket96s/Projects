@@ -6,7 +6,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Vote implements ActionListener {
+class Vote implements ActionListener {
 
     JButton button1;
     JButton button2;
