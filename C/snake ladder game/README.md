@@ -4,8 +4,8 @@
 
 <h2>Game Playing</h2>
 
-<img src="https://github.com/sanket96s/Projects/assets/109816069/9215da37-af3a-43d7-95c6-228b257910b6" alt="image" width="100%" height="250">
+<img src="https://github.com/sanket96s/Projects/assets/109816069/9215da37-af3a-43d7-95c6-228b257910b6" alt="image" height="250">
 
 <h2>Game End</h2>
 
-<img src="https://github.com/sanket96s/Projects/assets/109816069/99e18b22-bef7-4c2e-9cd8-138dbd694169" alt="image" width="100%" height="150">
+<img src="https://github.com/sanket96s/Projects/assets/109816069/99e18b22-bef7-4c2e-9cd8-138dbd694169" alt="image" height="150">
