@@ -1,6 +1,6 @@
 <h2>Game Start</h2>
 
-<img src="https://github.com/sanket96s/Projects/assets/109816069/1f64f07c-b68b-4c81-ac2b-1ce65e8739b6" alt="image" width="100%" height="200">
+<img src="https://github.com/sanket96s/Projects/assets/109816069/1f64f07c-b68b-4c81-ac2b-1ce65e8739b6" alt="image" height="200">
 
 <h2>Game Playing</h2>
 
