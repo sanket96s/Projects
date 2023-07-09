@@ -1,6 +1,6 @@
 <h1 align="center">Getting Info</h1>
 
-<img src="https://github.com/sanket96s/Projects/assets/109816069/e4404f90-66a1-4b8c-aaeb-d1eefce3e09f" alt="image" width="100%" height="300">
+<img src="https://github.com/sanket96s/Projects/assets/109816069/e4404f90-66a1-4b8c-aaeb-d1eefce3e09f" alt="image" width="100%" height="200">
 
 <h1 align="center">Choosing Operation</h1>
 
