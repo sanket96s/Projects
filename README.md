@@ -6,7 +6,7 @@
    
    features are :
    
-        voters have unique id
-        id can used once
-        user set number of voters
+   voters have unique id
+   id can used once
+   user set number of voters
             
