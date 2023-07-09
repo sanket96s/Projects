@@ -1,4 +1,4 @@
-<b>Vote page</b>
+<b text-align="center">Vote page</b>
 
  when we run code we see
 
