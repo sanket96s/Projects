@@ -12,4 +12,4 @@
 
 <h1 align="center">Displaying Score</h1>
 
-<img src="https://github.com/sanket96s/Projects/assets/109816069/1ecdf082-4202-4076-ae91-9985919bcb9d" alt="image" width="100%" height="200">
+<img src="https://github.com/sanket96s/Projects/assets/109816069/1ecdf082-4202-4076-ae91-9985919bcb9d" alt="image" width="100%" height="300">
