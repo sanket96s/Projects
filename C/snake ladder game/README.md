@@ -8,4 +8,4 @@
 
 <h2>Game End</h2>
 
-<img src="https://github.com/sanket96s/Projects/assets/109816069/99e18b22-bef7-4c2e-9cd8-138dbd694169" alt="image" height="150">
+<img src="https://github.com/sanket96s/Projects/assets/109816069/99e18b22-bef7-4c2e-9cd8-138dbd694169" alt="image" height="100">
