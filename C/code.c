@@ -69,7 +69,7 @@ void display()
         printf("Congratulations!!!!!! \t\tPlayer %s wins", player2);
         exit(0);
     }
-    printf("\n\n");
+    printf("\n");
     for (i = 10; i > 0; i--)
     {
         a = i - 1;
@@ -93,7 +93,7 @@ void display()
                 printf("%d\t", diceres);
             }
         }
-        printf("\n\n");
+        printf("\n");
     }
 }
 void main()
