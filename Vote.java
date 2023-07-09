@@ -13,11 +13,9 @@ public class Vote implements ActionListener {
     JButton button3;
     JButton button4;
     JButton button5;
-    static int cand1 = 0, cand2 = 0, cand3 = 0, cand4 = 0, cand5 = 0;
-
-    ImageIcon img = new ImageIcon("votebutton.jpg"); // add your own icon from your pc
-    ImageIcon img1 = new ImageIcon("votesymbol.png"); // add your own icon from your pc
     JFrame frame = new JFrame();
+    
+    static int cand1 = 0, cand2 = 0, cand3 = 0, cand4 = 0, cand5 = 0;
     static int [] voted;
     static int [] validid;
     static int a1, k = -1, i = 1;
@@ -483,7 +481,7 @@ public class Vote implements ActionListener {
         button1.setBounds(350, 30, 100, 60);
         button1.setBackground(Color.red);
         button1.setForeground(Color.green);
-        button1.setIcon(img1);
+        button1.setText("Vote");
         button1.setFont(new Font("s", Font.BOLD, 10));
         button1.setFocusable(false);
         button1.addActionListener(this);
@@ -491,7 +489,7 @@ public class Vote implements ActionListener {
 
         button2.setBounds(350, 30, 100, 60);
         button2.setBackground(Color.red);
-        button2.setIcon(img1);
+        button2.setText("Vote");
         button2.setFont(new Font("s", Font.BOLD, 10));
         button2.setFocusable(false);
         button2.addActionListener(this);
@@ -499,7 +497,7 @@ public class Vote implements ActionListener {
 
         button3.setBounds(350, 30, 100, 60);
         button3.setBackground(Color.red);
-        button3.setIcon(img1);
+        button3.setText("Vote");
         button3.setFont(new Font("s", Font.BOLD, 10));
         button3.setFocusable(false);
         button3.addActionListener(this);
@@ -507,7 +505,7 @@ public class Vote implements ActionListener {
 
         button4.setBounds(350, 30, 100, 60);
         button4.setBackground(Color.red);
-        button4.setIcon(img1);
+        button4.setText("Vote");
         button4.setFont(new Font("s", Font.BOLD, 10));
         button4.setFocusable(false);
         button4.addActionListener(this);
@@ -515,7 +513,7 @@ public class Vote implements ActionListener {
 
         button5.setBounds(350, 30, 100, 60);
         button5.setBackground(Color.red);
-        button5.setIcon(img1);
+        button5.setText("Vote");
         button5.setFont(new Font("s", Font.BOLD, 10));
         button5.setFocusable(false);
         button5.addActionListener(this);
@@ -563,7 +561,6 @@ public class Vote implements ActionListener {
         frame.setSize(500, 630);
         frame.setTitle("WELCOME TO VOTING PAGE");
         frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-        frame.setIconImage(img.getImage());
         frame.setLayout(null);
         frame.setResizable(false);
         frame.add(panel1);
