@@ -1,3 +1,6 @@
+# **🏏 Cricket Scoreboard**
+This project is a cricket scoreboard implemented in Python. It keeps track of runs, wickets, overs, and other statistics during a cricket match.
+
 <h2>Getting Info</h2>
 
 <img src="https://github.com/sanket96s/Projects/assets/109816069/e4404f90-66a1-4b8c-aaeb-d1eefce3e09f" alt="image" height="200">
