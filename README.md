@@ -1,6 +1,6 @@
 <h1>### Snake and Ladder Game</h1>
 
-This project is an implementation of the classic Snake and Ladder game in Java. Players roll a dice and move their pieces on the board accordingly.
+This project is an implementation of the classic Snake and Ladder game in C. Players roll a dice and move their pieces on the board accordingly.
 
 <h1>### Guess the Number Game</h1>
 
