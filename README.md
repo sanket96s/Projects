@@ -1,27 +1,29 @@
-<h1>### Snake and Ladder Game</h1>
-
+# **🐍 Snake and Ladder Game**
 This project is an implementation of the classic Snake and Ladder game in C. Players roll a dice and move their pieces on the board accordingly.
 
-<h1>### Guess the Number Game</h1>
+---
 
+# **💡 Guess the Number Game**
 This project is a "Guess the Number" game implemented in Java. The player tries to guess a randomly generated number within a specified range.
 
-<h1>### Voting Page Project</h1>
+---
 
+# **🗳️ Voting Page Project**
 This project is a simple voting page application developed in Java. It allows users to vote for their favorite options among a set of choices.
 
-<h1>### Cricket Scoreboard</h1>
+---
 
+# **🏏 Cricket Scoreboard**
 This project is a cricket scoreboard implemented in Python. It keeps track of runs, wickets, overs, and other statistics during a cricket match.
 
-<h1>### Grading System</h1>
+---
 
+# **🎓 Grading System**
 This project is a simple grading system implemented in Python. It calculates and displays grades based on input scores.
 
+---
 
-<h1>### Vegan Food Website</h1>
-
+# **🌱 Vegan Food Website**
 This project is a website dedicated to vegan food. It provides information about vegan recipes, nutrition, and lifestyle choices.
 
-Feel free to ask any doubt!
-for more info conatact me. links are in profile
+For more information, contact me. Links are in my profile.
