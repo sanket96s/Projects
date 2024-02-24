@@ -26,4 +26,11 @@ This project is a simple grading system implemented in Python. It calculates and
 # **🌱 Vegan Food Website**
 This project is a website dedicated to vegan food. It provides information about vegan recipes, nutrition, and lifestyle choices.
 
-For more information, contact me. Links are in my profile.
+---
+
+# **⚡ VS Code Theme Portfolio
+This project is a portfolio website designed to resemble the interface of Visual Studio Code. The page layout, color scheme, and typography are all inspired by the popular code editor. Visitors to the portfolio can navigate through different sections just like they would in VS Code, with each section showcasing projects, skills, and other relevant information. The familiar design elements provide a unique and immersive browsing experience for users.
+
+---
+
+Feel free to reach out for more details or collaboration opportunities! Links are available in my profile.
