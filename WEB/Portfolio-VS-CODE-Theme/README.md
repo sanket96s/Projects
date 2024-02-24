@@ -8,10 +8,10 @@ This portfolio showcases various projects I have worked on, along with informati
 
 ## Features
 
-- **VS Code Inspired Design:** The layout and design elements closely resemble Visual Studio Code, making it easy for developers to navigate and explore.
-- **Project Showcase:** Browse through a collection of projects I have worked on, each with descriptions and links for more information.
-- **Skills and Experience:** Learn about my skills, experience, and areas of expertise.
-- **Contact Information:** Easily get in touch with me through provided contact details.
+- VS Code Inspired Design: The layout and design elements closely resemble Visual Studio Code, making it easy for developers to navigate and explore.
+- Project Showcase: Browse through a collection of projects I have worked on, each with descriptions and links for more information.
+- Skills and Experience: Learn about my skills, experience, and areas of expertise.
+- Contact Information: Easily get in touch with me through provided contact details.
 
 ## Usage
 
@@ -33,6 +33,6 @@ If you have any feedback or suggestions for improvement, feel free to reach out!
 
 ## Contact
 
-For inquiries, collaborations, or just to say hello, you can reach me at [your.email@example.com](mailto:your.email@example.com).
+For inquiries, collaborations, or just to say hello, you can reach me at [your.email@example.com](mailto:sanketm9797@gmail.com).
 
 Thank you for visiting my portfolio! Enjoy exploring.
