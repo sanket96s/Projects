@@ -33,6 +33,6 @@ If you have any feedback or suggestions for improvement, feel free to reach out!
 
 ## Contact
 
-For inquiries, collaborations, or just to say hello, you can reach me at [your.email@example.com](mailto:sanketm9797@gmail.com).
+For inquiries, collaborations, or just to say hello, you can reach me at [sanketm9797@gmail.com.com](mailto:sanketm9797@gmail.com).
 
 Thank you for visiting my portfolio! Enjoy exploring.
