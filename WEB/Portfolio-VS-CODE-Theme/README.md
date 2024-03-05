@@ -35,4 +35,6 @@ If you have any feedback or suggestions for improvement, feel free to reach out!
 
 For inquiries, collaborations, or just to say hello, you can reach me at [sanketm9797@gmail.com](mailto:sanketm9797@gmail.com).
 
+https://sanket-mane.netlify.app/
+
 Thank you for visiting my portfolio! Enjoy exploring.
