@@ -25,6 +25,7 @@ This project is a simple grading system implemented in Python. It calculates and
 
 # 🌱 Vegan Food Website
 This project is a website dedicated to vegan food. It provides information about vegan recipes, nutrition, and lifestyle choices.
+
 live at https://vegan-food-website.netlify.app/
 
 ---
