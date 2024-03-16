@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegan Food Order Form</title>
+    <link rel="stylesheet" href="../css/order.css">
+</head>
+
+<body>
+
+    <form id="orderForm" action="" method="post" onsubmit="submitForm()">
+        <fieldset>
+            <legend>User Information</legend>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </fieldset>
+        <fieldset>
+            <legend>Product</legend>
+            <label for="productName">Product Name:</label>
+            <select id="productName" name="productName">
+                <option value="none">choose a item</option>
+                <option value="blaze Pizza">blaze Pizza</option>
+                <option value="Plant burger">Plant burger</option>
+                <option value="sandwich">sandwich</option>
+                <option value="Tofu Dish">Tofu Dish</option>
+                <option value="Vegan Noodle">Vegan Noodle</option>
+                <option value="Vegan Pizza">Vegan Pizza</option>
+                <option value="Vegan Pasta">Vegan Pasta</option>
+                <option value="Vegan Burger">Vegan Burger</option>
+
+                <label for="productPrice">Price:</label>
+                <input type="text" id="productPrice" name="productPrice" value="$0.00" readonly>
+
+                <label for="productQuantity">Quantity:</label>
+                <input type="number" id="productQuantity" name="productQuantity" value="0">
+
+                <button type="button" onclick="addToCart()">Add to Cart</button>
+        </fieldset>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="cartItems"></tbody>
+        </table>
+
+        <p class="total" id="totalAmount">Total: $0.00</p>
+        <input type="hidden" id="orderedItemsInput" name="orderedItems" value="">
+
+        <div class="order">
+            <input type="submit" value="Place Order">
+        </div>
+    </form>
+
+    <script>
+        let orderedItems = [];
+        function addToCart() {
+            const productName = document.getElementById("productName").value;
+            const productQuantity = document.getElementById("productQuantity").value;
+            const productPrice = parseFloat(document.getElementById("productPrice").value.replace("$", ""));
+
+            const cartItems = document.getElementById("cartItems");
+            const totalAmount = document.getElementById("totalAmount");
+            const orderedItemsDisplay = document.getElementById("orderedItemsDisplay");
+
+            if (productQuantity > 0) {
+                const subtotal = productQuantity * productPrice;
+
+                const row = `<tr><td>${productName}</td><td>${productQuantity}</td><td>$${subtotal.toFixed(2)}</td></tr>`;
+                cartItems.innerHTML += row;
+
+                const currentTotal = parseFloat(totalAmount.textContent.replace("Total: $", ""));
+                totalAmount.textContent = `Total: $${(currentTotal + subtotal).toFixed(2)}`;
+
+                orderedItems.push(productName);
+                document.getElementById("orderedItemsInput").value = JSON.stringify(orderedItems);
+            }
+        }
+
+
+        document.getElementById("productName").addEventListener("change", function () {
+
+            const selectedProduct = this.value;
+            let price;
+
+            switch (selectedProduct) {
+                case "blaze Pizza":
+                    price = 150.00;
+                    break;
+                case "Plant burger":
+                    price = 200.00;
+                    break;
+                case "sandwich":
+                    price = 100.00;
+                    break;
+                case "Tofu Dish":
+                    price = 250.00;
+                    break;
+                case "Vegan Noodle":
+                    price = 180.00;
+                    break;
+                case "Vegan Pizza":
+                    price = 70.00;
+                    break;
+                case "Vegan Pasta":
+                    price = 90.00;
+                    break;
+                case "Vegan Burger":
+                    price = 60.00;
+                    break;
+                default:
+                    price = 0.00;
+            }
+
+            document.getElementById("productPrice").value = `$${price.toFixed(2)}`;
+        });
+
+        function submitForm() {
+            const username = document.getElementById("username").value;
+            const totalAmount = document.getElementById("totalAmount").textContent.replace("Total: $", "");
+
+            const cartItems = document.getElementById("cartItems").getElementsByTagName("tr");
+            const items = [];
+
+            for (let i = 1; i < cartItems.length; i++) {
+                const cells = cartItems[i].getElementsByTagName("td");
+                const name = cells[0].textContent;
+                const subtotal = cells[2].textContent.replace("$", "");
+                items.push({ name, subtotal });
+            }
+
+            // Add hidden inputs to the form to include items and totalAmount
+            const itemsInput = document.createElement("input");
+            itemsInput.type = "hidden";
+            itemsInput.name = "items";
+            itemsInput.value = JSON.stringify(items);
+            document.getElementById("orderForm").appendChild(itemsInput);
+
+            const totalAmountInput = document.createElement("input");
+            totalAmountInput.type = "hidden";
+            totalAmountInput.name = "totalAmount";
+            totalAmountInput.value = totalAmount;
+            document.getElementById("orderForm").appendChild(totalAmountInput);
+
+            const orderedItemsDisplay = document.getElementById("orderedItemsDisplay");
+            const orderedItems = orderedItemsDisplay.getElementsByTagName("p");
+            const orderedItemNames = [];
+
+            for (let i = 0; i < orderedItems.length; i++) {
+                const itemName = orderedItems[i].textContent;
+                orderedItemNames.push(itemName);
+            }
+
+            // Add hidden input to the form to include ordered item names
+            const orderedItemsInput = document.createElement("input");
+            orderedItemsInput.type = "hidden";
+            orderedItemsInput.name = "orderedItems";
+            orderedItemsInput.value = JSON.stringify(orderedItemNames);
+            document.getElementById("orderForm").appendChild(orderedItemsInput);
+
+        }
+    </script>
+
+</body>
+
+</html>
