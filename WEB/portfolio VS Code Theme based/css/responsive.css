@@ -1,0 +1,108 @@
+.heading-title {
+    height: 4vh;
+}
+
+.first-left-sidebar {
+    width: 15vw;
+    height: 87vh;
+}
+
+.left-sidebar-items img {
+    height: 6vh;
+    width: 8vw;
+}
+
+.second-left-sidebar {
+    display: none;
+}
+
+.home-section-content {
+    width: 100%;
+    overflow: hidden;
+}
+
+.opened-section {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 6vh;
+}
+
+.left-sidebar-2-items img {
+    width: 5vw;
+    height: 2vh;
+}
+
+.home-section {
+    width: 100%;
+}
+
+.home-section-content {
+    width: 100%;
+    overflow: scroll;
+}
+
+.home-section-background {
+    font-size: 1.8rem;
+    margin-left: 3vw;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+#background-heading-2 {
+    margin-top: 4vh;
+}
+
+.name-heading {
+    font-size: 2rem;
+    margin-left: 6vw;
+}
+
+.typing-text {
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 360px) {
+    .home-section-background {
+        margin-top: 17vh;
+    }
+
+    #background-heading-2 {
+        margin-top: 6vh;
+    }
+}
+
+.projects h2 {
+    margin-left: 3vw;
+    margin-right: 1vh;
+}
+
+.project-card {
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-card ul li:last-child {
+    margin-right: 0;
+    /* Remove margin from last item */
+    margin-bottom: 2vh;
+}
+
+.vscode {
+    /* overflow-x: auto; */
+}
+
+.webpage-content {
+    height: 87vh;
+}
+
+.footer {
+    height: 7vh;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 70%;
+}
