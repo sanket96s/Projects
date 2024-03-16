@@ -5,58 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Vegan Food</title>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-
-            const nameInput = document.getElementById("name");
-            const mobileInput = document.getElementById("mobile");
-
-            nameInput.addEventListener("input", function () {
-                validateName();
-            });
-
-            mobileInput.addEventListener("input", function () {
-                validateMobile();
-            });
-
-            function validateName() {
-                const nameRegex = /^[a-zA-Z\s]+$/;
-                const name = nameInput.value;
-                const nameError = document.getElementById("name-error");
-
-                if (nameRegex.test(name)) {
-                    // Valid name
-                    nameError.textContent = "";
-                } else {
-                    // Invalid name
-                    nameError.textContent = "Please enter a valid name (only letters and spaces).";
-                }
-            }
-
-            function validateMobile() {
-                const mobileRegex = /^[0-9]{10}$/;
-                const mobile = mobileInput.value;
-                const mobileError = document.getElementById("mobile-error");
-
-                if (mobileRegex.test(mobile)) {
-                    // Valid mobile number
-                    mobileError.textContent = "";
-                } else {
-                    // Invalid mobile number
-                    mobileError.textContent = "Please enter a valid 10-digit mobile number.";
-                }
-            }
-
-            // Reset validation messages on form submit
-            document.querySelector("form").addEventListener("submit", function () {
-                const nameError = document.getElementById("name-error");
-                const mobileError = document.getElementById("mobile-error");
-
-                nameError.textContent = "";
-                mobileError.textContent = "";
-            });
-        });
-    </script>
     <link rel="stylesheet" href="../css/contact.css">
 </head>
 
