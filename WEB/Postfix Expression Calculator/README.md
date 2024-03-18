@@ -23,5 +23,3 @@ Postfix expressions are mathematical notations where operators follow their oper
 ## Author
 
 Sanket Mane
-
-## License
