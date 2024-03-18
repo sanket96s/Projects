@@ -26,7 +26,7 @@ This project is a simple grading system implemented in Python. It calculates and
 # 📟 Postfix Expression Evaluator
 This project is a postfix expression evaluator implemented in HTML, CSS, and JavaScript. It allows users to enter postfix expressions and calculates the result instantly.
 
-[Live Demo]([https://postfix-calculator-demo.netlify.app/](https://postfix-expression-calculator.netlify.app/))
+[Live Demo](https://postfix-expression-calculator.netlify.app/)
 
 ---
 
