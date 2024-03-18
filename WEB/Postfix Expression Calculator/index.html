@@ -5,38 +5,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Postfix Expression Evaluator</title>
+  <meta name="description"
+    content="A simple tool to evaluate postfix expressions. Enter your postfix expression and get the result instantly.">
+  <meta name="keywords"
+    content="postfix expression, postfix expression evaluator, postfix notation, expression evaluation, calculator">
+  <meta name="author" content="Sanket Mane">
+
+  <!-- Open Graph tags for better social media sharing -->
+  <meta property="og:title" content="Postfix Expression Evaluator">
+  <meta property="og:description"
+    content="A simple tool to evaluate postfix expressions. Enter your postfix expression and get the result instantly.">
+
   <style>
+    /* Styles for the body */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #000000;
       display: flex;
       justify-content: center;
       align-items: center;
+      background-color: #F5F5F5;
+      /* Background color for the body */
       min-height: 100vh;
     }
 
+    /* Styles for the container */
     .container {
       width: 90%;
       max-width: 400px;
-      background-color: #d0c4c4;
+      background-color: #DCEFFB;
+      /* Background color for the container */
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       padding: 30px;
     }
 
+    /* Styles for the heading */
     h1 {
       text-align: center;
       margin-bottom: 30px;
       color: #333;
     }
 
+    /* Styles for the labels */
     label {
       font-weight: bold;
       color: #333;
     }
 
+    /* Styles for the input field */
     input[type="text"] {
       width: 100%;
       padding: 10px;
@@ -46,6 +64,7 @@
       font-size: 16px;
     }
 
+    /* Styles for the button */
     button {
       display: block;
       width: 100%;
@@ -59,10 +78,12 @@
       transition: background-color 0.3s;
     }
 
+    /* Hover styles for the button */
     button:hover {
       background-color: #0056b3;
     }
 
+    /* Styles for the result paragraph */
     p#result {
       margin-top: 20px;
       font-weight: bold;
@@ -70,6 +91,20 @@
       color: #333;
     }
 
+    /* Semi-transparent overlay for the background */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      /* Semi-transparent overlay */
+      z-index: -1;
+    }
+
+    /* Media query for smaller screens */
     @media screen and (max-width: 480px) {
       .container {
         padding: 20px;
@@ -142,9 +177,12 @@
 <body>
   <div class="container">
     <h1>Postfix Expression Evaluator</h1>
+    <!-- Input field for postfix expression -->
     <label for="expression">Enter the postfix expression (without spaces):</label><br>
     <input type="text" id="expression" name="expression"><br>
+    <!-- Button to trigger evaluation -->
     <button onclick="main()">Evaluate</button>
+    <!-- Paragraph to display the result -->
     <p id="result"></p>
   </div>
 </body>
