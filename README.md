@@ -23,17 +23,24 @@ This project is a simple grading system implemented in Python. It calculates and
 
 ---
 
+# 📟 Postfix Expression Evaluator
+This project is a postfix expression evaluator implemented in HTML, CSS, and JavaScript. It allows users to enter postfix expressions and calculates the result instantly.
+
+[Live Demo]([https://postfix-calculator-demo.netlify.app/](https://postfix-expression-calculator.netlify.app/))
+
+---
+
 # 🌱 Vegan Food Website
 This project is a website dedicated to vegan food. It provides information about vegan recipes, nutrition, and lifestyle choices.
 
-live at https://vegan-food-website.netlify.app/
+[Live Demo](https://vegan-food-website.netlify.app/)
 
 ---
 
 # ⚡ VS Code Theme Portfolio
 This project is a portfolio website designed to resemble the interface of Visual Studio Code. The page layout, color scheme, and typography are all inspired by the popular code editor. Visitors to the portfolio can navigate through different sections just like they would in VS Code, with each section showcasing projects, skills, and other relevant information. The familiar design elements provide a unique and immersive browsing experience for users.
 
-live at https://sanket-mane.netlify.app/
+[Live Demo](https://sanket-mane.netlify.app/)
 
 ---
 
