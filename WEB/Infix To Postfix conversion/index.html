@@ -105,7 +105,8 @@
     <script>
         // Global variables
         let infix = "", postfix = "";
-
+        let stack = [];
+        let top = -1;
         // Function to push an element onto the stack
         function push(item) {
             top++;
