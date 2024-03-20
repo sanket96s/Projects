@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postfix Expression Evaluator</title>
+  <meta name="description"
+    content="A simple tool to evaluate postfix expressions. Enter your postfix expression and get the result instantly.">
+  <meta name="keywords"
+    content="postfix expression, postfix expression evaluator, postfix notation, expression evaluation, calculator">
+  <meta name="author" content="Sanket Mane">
+
+  <!-- Open Graph tags for better social media sharing -->
+  <meta property="og:title" content="Postfix Expression Evaluator">
+  <meta property="og:description"
+    content="A simple tool to evaluate postfix expressions. Enter your postfix expression and get the result instantly.">
+
+  <style>
+    /* Styles for the body */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #F5F5F5;
+      /* Background color for the body */
+      min-height: 100vh;
+    }
+
+    /* Styles for the container */
+    .container {
+      width: 90%;
+      max-width: 400px;
+      background-color: #DCEFFB;
+      /* Background color for the container */
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+
+    /* Styles for the heading */
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    /* Styles for the labels */
+    label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Styles for the input field */
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    /* Styles for the button */
+    button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    /* Hover styles for the button */
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Styles for the result paragraph */
+    p#result {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+      color: #333;
+    }
+
+    /* Semi-transparent overlay for the background */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      /* Semi-transparent overlay */
+      z-index: -1;
+    }
+
+    /* Media query for smaller screens */
+    @media screen and (max-width: 480px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+        font-size: 14px;
+      }
+
+      button {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  </style>
+  <script>
+    // Function to evaluate the postfix expression
+    function answer(expression) {
+      let stack = [];
+      let top = -1;
+
+      // Iterate through each character of the postfix expression
+      for (let i = 0; i < expression.length; i++) {
+        let ch = expression[i];
+        if (!isNaN(ch)) {
+          // If the character is a digit, push it onto the stack
+          stack.push(parseInt(ch));
+        } else {
+          // If the character is an operator, pop two operands from the stack, perform operation, and push result back
+          let num1 = stack.pop();
+          let num2 = stack.pop();
+
+          switch (ch) {
+            case '+':
+              stack.push(num2 + num1);
+              break;
+            case '-':
+              stack.push(num2 - num1);
+              break;
+            case '*':
+              stack.push(num2 * num1);
+              break;
+            case '/':
+              stack.push(num2 / num1);
+              break;
+          }
+        }
+      }
+      // The result is the top element of the stack
+      return stack.pop();
+    }
+
+    // Main function
+    function main() {
+      // Get the input expression from the user
+      let expression = document.getElementById("expression").value;
+
+      // Evaluate the expression and display the result
+      const result = answer(expression);
+      document.getElementById("result").textContent = "Answer is: " + result;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Postfix Expression Evaluator</h1>
+    <!-- Input field for postfix expression -->
+    <label for="expression">Enter the postfix expression (without spaces):</label><br>
+    <input type="text" id="expression" name="expression"><br>
+    <!-- Button to trigger evaluation -->
+    <button onclick="main()">Evaluate</button>
+    <!-- Paragraph to display the result -->
+    <p id="result"></p>
+  </div>
+</body>
+
+</html>
