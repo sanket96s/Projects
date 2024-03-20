@@ -2,189 +2,213 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Postfix Expression Evaluator</title>
-  <meta name="description"
-    content="A simple tool to evaluate postfix expressions. Enter your postfix expression and get the result instantly.">
-  <meta name="keywords"
-    content="postfix expression, postfix expression evaluator, postfix notation, expression evaluation, calculator">
-  <meta name="author" content="Sanket Mane">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convert infix expressions to postfix notation instantly.">
+    <meta name="keywords" content="infix to postfix, converter, algorithm, expression, postfix notation, stack">
+    <meta name="author" content="Sanket Mane">
 
-  <!-- Open Graph tags for better social media sharing -->
-  <meta property="og:title" content="Postfix Expression Evaluator">
-  <meta property="og:description"
-    content="A simple tool to evaluate postfix expressions. Enter your postfix expression and get the result instantly.">
+    <!-- Open Graph tags for better social media sharing -->
+    <meta property="og:title" content="Infix to Postfix Converter">
+    <meta property="og:description" content="Convert infix expressions to postfix notation instantly.">
 
-  <style>
-    /* Styles for the body */
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #F5F5F5;
-      /* Background color for the body */
-      min-height: 100vh;
-    }
+    <title>Infix to Postfix Converter</title>
 
-    /* Styles for the container */
-    .container {
-      width: 90%;
-      max-width: 400px;
-      background-color: #DCEFFB;
-      /* Background color for the container */
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      padding: 30px;
-    }
-
-    /* Styles for the heading */
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #333;
-    }
-
-    /* Styles for the labels */
-    label {
-      font-weight: bold;
-      color: #333;
-    }
-
-    /* Styles for the input field */
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-
-    /* Styles for the button */
-    button {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s;
-    }
-
-    /* Hover styles for the button */
-    button:hover {
-      background-color: #0056b3;
-    }
-
-    /* Styles for the result paragraph */
-    p#result {
-      margin-top: 20px;
-      font-weight: bold;
-      text-align: center;
-      color: #333;
-    }
-
-    /* Semi-transparent overlay for the background */
-    body::after {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.3);
-      /* Semi-transparent overlay */
-      z-index: -1;
-    }
-
-    /* Media query for smaller screens */
-    @media screen and (max-width: 480px) {
-      .container {
-        padding: 20px;
-      }
-
-      h1 {
-        font-size: 24px;
-        margin-bottom: 20px;
-      }
-
-      input[type="text"] {
-        font-size: 14px;
-      }
-
-      button {
-        font-size: 14px;
-        padding: 10px;
-      }
-    }
-  </style>
-  <script>
-    // Function to evaluate the postfix expression
-    function answer(expression) {
-      let stack = [];
-      let top = -1;
-
-      // Iterate through each character of the postfix expression
-      for (let i = 0; i < expression.length; i++) {
-        let ch = expression[i];
-        if (!isNaN(ch)) {
-          // If the character is a digit, push it onto the stack
-          stack.push(parseInt(ch));
-        } else {
-          // If the character is an operator, pop two operands from the stack, perform operation, and push result back
-          let num1 = stack.pop();
-          let num2 = stack.pop();
-
-          switch (ch) {
-            case '+':
-              stack.push(num2 + num1);
-              break;
-            case '-':
-              stack.push(num2 - num1);
-              break;
-            case '*':
-              stack.push(num2 * num1);
-              break;
-            case '/':
-              stack.push(num2 / num1);
-              break;
-          }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F5F5F5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-      }
-      // The result is the top element of the stack
-      return stack.pop();
-    }
 
-    // Main function
-    function main() {
-      // Get the input expression from the user
-      let expression = document.getElementById("expression").value;
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: -1;
+        }
 
-      // Evaluate the expression and display the result
-      const result = answer(expression);
-      document.getElementById("result").textContent = "Answer is: " + result;
-    }
-  </script>
+        #container {
+            width: 400px;
+            background-color: #DCEFFB;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #333;
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p#postfixExpression {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Postfix Expression Evaluator</h1>
-    <!-- Input field for postfix expression -->
-    <label for="expression">Enter the postfix expression (without spaces):</label><br>
-    <input type="text" id="expression" name="expression"><br>
-    <!-- Button to trigger evaluation -->
-    <button onclick="main()">Evaluate</button>
-    <!-- Paragraph to display the result -->
-    <p id="result"></p>
-  </div>
+    <div id="container">
+        <h1>Infix to Postfix Converter</h1>
+        <label for="infixExpression">Enter a valid infix expression (without spaces):</label>
+        <input type="text" id="infixExpression" name="infixExpression">
+        <button onclick="convertInfixToPostfix()">Convert</button>
+        <p id="postfixExpression"></p>
+    </div>
+
+    <script>
+        // Global variables
+        let infix = "", postfix = "";
+
+        // Function to push an element onto the stack
+        function push(item) {
+            top++;
+            stack[top] = item;
+        }
+
+        // Function to pop an element from the stack
+        function pop() {
+            let item;
+
+            if (top < 0) {
+                console.log("\n Stack Underflow!");
+                process.exit(1);
+            } else {
+                item = stack[top];
+                top = top - 1;
+                return item;
+            }
+        }
+
+        // Function to check if a character is an operator
+        function isOperator(op) {
+            return (op === '^' || op === '*' || op === '/' || op === '+' || op === '-');
+        }
+
+        // Function to check the precedence of an operator
+        function checkPrecedence(op) {
+            if (op === '^') {
+                return 3;
+            } else if (op === '*' || op === '/') {
+                return 2;
+            } else if (op === '+' || op === '-') {
+                return 1;
+            } else {
+                return 0;
+            }
+        }
+
+        // Function to convert infix expression to postfix expression
+        function infixToPostfix() {
+            let temp, item;
+            let i = 0, j = 0;
+            let top = -1;
+            let stack = [];
+
+            // Push '(' onto the stack to handle the first '('
+            push('(');
+            // Append ')' to the infix expression to denote the end
+            infix += ")";
+            // Get the first character of the infix expression
+            item = infix[i];
+
+            // Iterate through each character of the infix expression
+            while (item !== '\0') {
+                if (item === '(') {
+                    push(item);
+                } else if (!isNaN(item) || item.match(/[a-z]/i)) {
+                    // Append operands directly to the postfix expression
+                    postfix += item;
+                    j++;
+                } else if (isOperator(item)) {
+                    // If an operator is encountered, pop operators with higher or equal precedence
+                    // from the stack and append them to the postfix expression
+                    temp = pop();
+                    while (isOperator(temp) && checkPrecedence(temp) >= checkPrecedence(item)) {
+                        postfix += temp;
+                        j++;
+                        temp = pop();
+                    }
+                    // Push the current operator onto the stack
+                    push(temp);
+                    push(item);
+                } else if (item === ')') {
+                    // If a ')' is encountered, pop operators from the stack and append them to
+                    // the postfix expression until a '(' is encountered
+                    temp = pop();
+                    while (temp !== '(') {
+                        postfix += temp;
+                        j++;
+                        temp = pop();
+                    }
+                } else {
+                    console.log("\nInvalid expression!");
+                    process.exit(1);
+                }
+                // Move to the next character in the infix expression
+                i++;
+                item = infix[i];
+            }
+            // Set the postfix expression to the HTML element
+            document.getElementById("postfixExpression").textContent = "Postfix expression is " + postfix;
+        }
+
+        // Function to handle the conversion process
+        function convertInfixToPostfix() {
+            // Get the infix expression from the input field
+            infix = document.getElementById("infixExpression").value;
+            // Reset the postfix expression
+            postfix = "";
+            // Convert infix expression to postfix expression
+            infixToPostfix();
+        }
+    </script>
 </body>
 
 </html>
