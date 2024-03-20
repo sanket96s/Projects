@@ -158,7 +158,7 @@
             item = infix[i];
 
             // Iterate through each character of the infix expression
-            while (item !== '\0') {
+            while (expression.length) {
                 if (item === '(') {
                     push(item);
                 } else if (!isNaN(item) || item.match(/[a-z]/i)) {
