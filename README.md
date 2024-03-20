@@ -23,6 +23,13 @@ This project is a simple grading system implemented in Python. It calculates and
 
 ---
 
+# 🔄 Infix to Postfix Converter
+
+This project is an implementation of an infix to postfix converter. It allows users to input infix expressions and converts them to postfix notation using a stack-based algorithm.
+
+[Live Demo](https://infix-to-postfix-conversion.netlify.app/)
+---
+
 # 📟 Postfix Expression Evaluator
 This project is a postfix expression evaluator implemented in HTML, CSS, and JavaScript. It allows users to enter postfix expressions and calculates the result instantly.
 
