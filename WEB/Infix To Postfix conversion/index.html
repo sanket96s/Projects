@@ -104,25 +104,28 @@
 
     <script>
         // Global variables
-        let infix = "", postfix = "";
+        // Global variables
+        let infix = "";
+        let postfix = "";
         let stack = [];
-        let top = -1;
+        let topIndex = -1; // Renamed 'top' to 'topIndex' to avoid redeclaration issues
+
         // Function to push an element onto the stack
         function push(item) {
-            top++;
-            stack[top] = item;
+            topIndex++;
+            stack[topIndex] = item;
         }
 
         // Function to pop an element from the stack
         function pop() {
             let item;
 
-            if (top < 0) {
+            if (topIndex < 0) {
                 console.log("\n Stack Underflow!");
-                process.exit(1);
+                return null;
             } else {
-                item = stack[top];
-                top = top - 1;
+                item = stack[topIndex];
+                topIndex--;
                 return item;
             }
         }
@@ -158,7 +161,7 @@
             item = infix[i];
 
             // Iterate through each character of the infix expression
-            while (expression.length) {
+            while (i < infix.length) {
                 if (item === '(') {
                     push(item);
                 } else if (!isNaN(item) || item.match(/[a-z]/i)) {
@@ -188,7 +191,7 @@
                     }
                 } else {
                     console.log("\nInvalid expression!");
-                    process.exit(1);
+                    return;
                 }
                 // Move to the next character in the infix expression
                 i++;
