@@ -52,4 +52,10 @@ This project is a portfolio website designed to resemble the interface of Visual
 
 ---
 
+# 🎮 Gamified Intellectual Property Awareness for Kids
+
+An interactive platform designed to teach kids aged 8 to 14 about intellectual property rights through games, quizzes, and educational content. Engaging activities, community features, and progress tracking empower young learners to understand and protect creative ideas.
+
+[Live Demo](https://intellectual-property-games.netlify.app/)
+
 Feel free to reach out for more details or collaboration opportunities! Links are available in my profile.
