@@ -16,6 +16,4 @@ The platform features:
 
 By gamifying the learning experience, this platform aims to make intellectual property rights education engaging, accessible, and enjoyable for students, empowering them to become responsible creators and consumers in the digital age.
 
-[Live Demo](https://intellectual-property-games.netlify.app/)
-
 Feel free to reach out for more details or collaboration opportunities! Links are available in my profile.
